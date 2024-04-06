@@ -1,7 +1,7 @@
 open cmd
 netstat -ano | findstr :8080
 
-open task manager   ctrl+shift+esc
+open task manager   ctrl+shift+esc   --> details
 search pid with from the above cmd
 		Example:
 			C:\Users\acer>netstat -ano | findstr :8080
