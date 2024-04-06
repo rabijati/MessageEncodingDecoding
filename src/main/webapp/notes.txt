@@ -1,0 +1,45 @@
+open cmd
+netstat -ano | findstr :8080
+
+open task manager   ctrl+shift+esc
+search pid with from the above cmd
+		Example:
+			C:\Users\acer>netstat -ano | findstr :8080
+  			TCP    0.0.0.0:8080           0.0.0.0:0              LISTENING       4296
+  			TCP    [::]:8080              [::]:0                 LISTENING       4296
+
+			TNSLSNR.EXE    4296    Running     SYSTEM     --> delete from task manager
+			
+			
+
+encoder.java
+
+get plain text  --> user input
+
+StringBuilder binaryString = new StringBuilder();    --> variable of binary string builder
+
+
+for (char c : plainText.toCharArray()) {    --> convert plain text to char array  --> example : hello   --> ['h','e','l','l','o']
+
+String binary = Integer.toBinaryString(c);    --> convert char c to it's binary representation as string  --> Example : if c = A = 65 --> "1000001"
+
+while (binary.length() < 8) {
+    binary = "0" + binary;
+}
+--> check if above binary string is 8 bits long or not if not then add 0 to the binary string i.e. "1000001" --> "01000001"
+
+binaryString.append(binary);     --> add the above binarystring to brinary string stringbuilder
+
+while (index < binaryString.length()) {   --> looping until index is less than the length of above founded binary string
+
+            String group = binaryString.substring(index, Math.min(index + 6, binaryString.length()));
+--> grouping the above founded binary string containing 6 digits
+
+while (group.length() < 6) {
+                group += "0";
+            }
+--> if the group conatins less than 6 digit then add 0 to the group to make it conatin 6 digit
+
+ int decimalValue = Integer.parseInt(group, 2);   --> convert the binary string group to corresponding decimal value    --> 2 is written to indiacte group is in base-2(binary) format
+
+                char base64Char = getBase64Char(decimalValue);
