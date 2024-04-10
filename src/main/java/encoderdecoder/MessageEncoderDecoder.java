@@ -40,6 +40,8 @@ public class MessageEncoderDecoder extends HttpServlet {
             result = encode.encoded(message);
 
         } else if ("decode".equals(option)) {
+        	binaryString = decode.convertToBinaryString(message);
+        	groupedBinaryString = decode.groupBinaryString(binaryString);
             result = decode.decoded(message);
         }
        
