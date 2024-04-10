@@ -1,3 +1,6 @@
+project tab-->clean
+right click on project --> build project
+then run
 open cmd
 netstat -ano | findstr :8080
 

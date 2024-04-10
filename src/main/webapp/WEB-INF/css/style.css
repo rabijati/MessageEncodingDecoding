@@ -1,51 +1,54 @@
 body {
-    background : teal;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    flex-direction: column;
+	background: teal;
+	/* 	background-image : url("../image/image.jpg"); */
+	/* 	background-repeat: no-repeat; */
+	/* 	background-size: cover; */
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 100vh;
+	flex-direction: column;
 }
 
 h2 {
-    color: #f2f2d3; /* Changed heading title color */
-    text-align: center;
+	color: #f2f2d3; /* Changed heading title color */
+	text-align: center;
 }
 
 form {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    border: 1px solid #ccc;
-    padding: 20px;
-    border-radius: 8px;
-    background-color: #ffffff;
-    width: 400px; /* Set the width of the form */
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	border: 1px solid #ccc;
+	padding: 20px;
+	border-radius: 8px;
+	background-color: #ffffff;
+	width: 400px; /* Set the width of the form */
 }
 
 label, input, select {
-    margin-bottom: 10px;
-    width: 100%; /* Set the width to 100% */
+	margin-bottom: 10px;
+	width: 100%; /* Set the width to 100% */
 }
 
 input[type="submit"] {
-    width: auto; /* Set the width to auto */
-    padding: 10px 20px;
+	width: auto; /* Set the width to auto */
+	padding: 10px 20px;
 }
 
 table {
-    margin-top: 20px;
-    border-collapse: collapse;
-    width: 300px; /* Set the width of the table */
+	margin-top: 20px;
+	border-collapse: collapse;
+	width: 300px; /* Set the width of the table */
 }
 
 th, td {
-    padding: 8px;
-    text-align: left;
-    border-bottom: 1px solid #ddd;
-    background-color: #f2f2d3;
+	padding: 8px;
+	text-align: left;
+	border-bottom: 1px solid #ddd;
+	background-color: #f2f2d3;
 }
 
 th {
-    background-color: #f2f2f2;
+	background-color: #f2f2f2;
 }

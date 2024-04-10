@@ -31,12 +31,20 @@
 
         <% if (request.getAttribute("result") != null) {%>
         <table border="1">
+           <tr>
+                <th>Binary Representation</th>
+                <td><%= request.getAttribute("binaryString")%></td>
+            </tr>
+             <tr>
+                <th>Grouped Binary Representation</th>
+                <td><%= request.getAttribute("groupedBinaryString")%></td>
+            </tr>
             <tr>
                 <th>Result</th>
-            </tr>
-            <tr>
                 <td><%= request.getAttribute("result")%></td>
-            </tr>
+            </tr>           
+            
+            
         </table>
         <% }%>
 
