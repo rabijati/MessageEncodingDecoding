@@ -4,13 +4,13 @@
 <html>
     <head>
         <meta charset="UTF-8">
-        <title>Message Encoder/Decoder</title>
+        <title>Message Encoding/Decoding</title>
         <style><%@include file="/WEB-INF/css/style.css"%></style>
 
     </head>
     <body>
 
-        <h2>Message Encoder/Decoder</h2>
+        <h2>Message Encoding and Decoding</h2>
 
         <form action="MessageEncoderDecoder" method="post" onsubmit="return validateForm()">
             <label for="option">Select an Option:</label>

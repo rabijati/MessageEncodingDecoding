@@ -30,24 +30,22 @@ public class MessageEncoderDecoder extends HttpServlet {
         String result = "";
         String binaryString = "";
         String groupedBinaryString = "" ;
+        
         Encoder encode = new Encoder();
         Decoder decode = new Decoder();
 
         if ("encode".equals(option)) {
-            result = encode.encoded(message);
-            // Use the encodeBinary method from Encoder class
             binaryString = encode.convertToBinaryString(message);
-            groupedBinaryString = encode.groupedBinaryString(binaryString);
-            request.setAttribute("groupedBinaryString", groupedBinaryString);
-           
+            groupedBinaryString = encode.displayGroupedBinaryString(binaryString);
+            result = encode.encoded(message);
+
         } else if ("decode".equals(option)) {
             result = decode.decoded(message);
         }
-
-        request.setAttribute("result", result);     
-        
+       
         request.setAttribute("binaryString", binaryString);
-        
+        request.setAttribute("groupedBinaryString", groupedBinaryString);
+        request.setAttribute("result", result);     
         request.getRequestDispatcher("index.jsp").forward(request, response);
     }
 }

@@ -22,7 +22,7 @@ public class Encoder {
 	public String encoded(String plainText) {
 		String binaryString = convertToBinaryString(plainText);
 		String encodedString = encodeBinaryToString(binaryString);
-		return padEncodedString(new StringBuilder(encodedString));
+		return addedEncodedString(new StringBuilder(encodedString));
 	}
 
 	public String convertToBinaryString(String plainText) {
@@ -63,9 +63,7 @@ public class Encoder {
 		return encodedString.toString();
 	}
 
-	
-	//to display in jsp
-	public String groupedBinaryString(String binaryString) {
+	public String displayGroupedBinaryString(String binaryString) {
 		StringBuilder groupedBinaryString = new StringBuilder();
 		int index = 0;
 		StringBuilder binaryStringbuilder = new StringBuilder(binaryString);
@@ -80,7 +78,7 @@ public class Encoder {
 		return groupedBinaryString.toString().trim();
 	}
 
-	private String padEncodedString(StringBuilder encodedString) {
+	private String addedEncodedString(StringBuilder encodedString) {
 		while (encodedString.length() % 4 != 0) {
 			encodedString.append("=");
 		}
